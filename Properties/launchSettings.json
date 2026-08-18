@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "RegulatoryReportingPortal": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:61729;http://localhost:61730"
+    }
+  }
+}

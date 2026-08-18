@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regulatory Reporting Portal</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header>
+    <div>
+      <span class="eyebrow">C# · .NET · SQL SERVER</span>
+      <h1>Regulatory Reporting Portal</h1>
+      <p>Validación de clientes, generación XML y trazabilidad para reportes regulatorios ficticios.</p>
+    </div>
+    <span id="api-status" class="status">Comprobando API…</span>
+  </header>
+
+  <main>
+    <section id="login-panel" class="panel login-panel">
+      <div>
+        <span class="eyebrow">ACCESO AL SISTEMA</span>
+        <h2>Sesión de analista</h2>
+        <p>Inicia sesión para crear reportes y consultar sus archivos XML.</p>
+      </div>
+      <form id="login-form">
+        <label>Usuario<input name="username" value="analyst" autocomplete="username"></label>
+        <label>Contraseña<input name="password" type="password" value="Analyst2026!" autocomplete="current-password"></label>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div id="session-info" hidden>
+        <strong id="session-user"></strong>
+        <button id="logout" class="secondary">Cerrar sesión</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Resumen">
+      <article><span>Clientes</span><strong id="client-count">0</strong></article>
+      <article><span>Reportes</span><strong id="report-count">0</strong></article>
+      <article><span>Eventos de auditoría</span><strong id="audit-count">0</strong></article>
+    </section>
+
+    <section class="panel actions">
+      <div>
+        <span class="eyebrow">GENERACIÓN</span>
+        <h2>Crear reporte regulatorio</h2>
+        <p>Consolida los registros válidos y produce un XML descargable.</p>
+      </div>
+      <div class="buttons">
+        <button data-standard="FATCA">Crear FATCA</button>
+        <button class="secondary" data-standard="CRS">Crear CRS</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <span class="eyebrow">DATOS FICTICIOS</span>
+        <h2>Clientes registrados</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Cliente</th><th>País</th><th>Saldo</th></tr></thead>
+            <tbody id="clients"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="panel">
+        <span class="eyebrow">TRAZABILIDAD</span>
+        <h2>Actividad reciente</h2>
+        <ol id="audit" class="timeline"></ol>
+      </article>
+    </section>
+
+    <section class="panel">
+      <span class="eyebrow">SALIDAS</span>
+      <h2>Reportes generados</h2>
+      <div id="reports" class="report-list"></div>
+    </section>
+  </main>
+
+  <footer>Entorno de práctica con información ficticia.</footer>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

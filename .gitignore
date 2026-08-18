@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
+.dotnet-home/
+.appdata/
+.packages/
+.keys/
+Data/*.db
+Data/*.db-shm
+Data/*.db-wal

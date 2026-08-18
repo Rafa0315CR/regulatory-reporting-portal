@@ -1,0 +1,43 @@
+@host = http://localhost:5074
+
+POST {{host}}/api/session/login
+Content-Type: application/json
+
+{
+  "username": "analyst",
+  "password": "Analyst2026!"
+}
+
+###
+
+GET {{host}}/api/health
+Accept: application/json
+
+###
+GET {{host}}/api/clients
+Accept: application/json
+
+###
+POST {{host}}/api/clients
+Content-Type: application/json
+
+{
+  "legalName": "María Vargas",
+  "taxIdentificationNumber": "CR-206780123",
+  "countryCode": "CR",
+  "dateOfBirth": "1991-06-18",
+  "accountBalance": 12800.50,
+  "currency": "USD"
+}
+
+###
+POST {{host}}/api/reports
+Content-Type: application/json
+
+{
+  "standard": "CRS"
+}
+
+###
+GET {{host}}/api/audit
+Accept: application/json

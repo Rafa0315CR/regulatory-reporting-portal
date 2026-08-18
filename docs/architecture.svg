@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura del Regulatory Reporting Portal</title>
+  <desc id="desc">Flujo desde la interfaz web hasta la API, servicios de negocio, persistencia y generación XML.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="1" stop-color="#123148"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#43d7a5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#background)"/>
+  <text x="64" y="70" fill="#43d7a5" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">ARQUITECTURA</text>
+  <text x="64" y="112" fill="#f1f6fb" font-family="Arial, sans-serif" font-size="34" font-weight="700">Regulatory Reporting Portal</text>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <g transform="translate(60 175)">
+      <rect width="205" height="180" rx="18" fill="#101c2e" stroke="#2b405a"/>
+      <text x="24" y="42" fill="#43d7a5" font-size="13" font-weight="700">PRESENTACIÓN</text>
+      <text x="24" y="78" fill="#fff" font-size="22" font-weight="700">Interfaz web</text>
+      <text x="24" y="111" fill="#91a6bc" font-size="15">HTML · CSS</text>
+      <text x="24" y="136" fill="#91a6bc" font-size="15">JavaScript</text>
+      <text x="24" y="161" fill="#91a6bc" font-size="15">Sesión de usuario</text>
+    </g>
+    <g transform="translate(335 175)">
+      <rect width="205" height="180" rx="18" fill="#101c2e" stroke="#2b405a"/>
+      <text x="24" y="42" fill="#43d7a5" font-size="13" font-weight="700">APLICACIÓN</text>
+      <text x="24" y="78" fill="#fff" font-size="22" font-weight="700">ASP.NET Core</text>
+      <text x="24" y="111" fill="#91a6bc" font-size="15">REST API</text>
+      <text x="24" y="136" fill="#91a6bc" font-size="15">Autenticación</text>
+      <text x="24" y="161" fill="#91a6bc" font-size="15">Autorización por rol</text>
+    </g>
+    <g transform="translate(610 175)">
+      <rect width="205" height="180" rx="18" fill="#101c2e" stroke="#2b405a"/>
+      <text x="24" y="42" fill="#43d7a5" font-size="13" font-weight="700">DOMINIO</text>
+      <text x="24" y="78" fill="#fff" font-size="22" font-weight="700">Servicios</text>
+      <text x="24" y="111" fill="#91a6bc" font-size="15">Validaciones</text>
+      <text x="24" y="136" fill="#91a6bc" font-size="15">Reportes FATCA/CRS</text>
+      <text x="24" y="161" fill="#91a6bc" font-size="15">Trazabilidad</text>
+    </g>
+    <g transform="translate(885 175)">
+      <rect width="255" height="180" rx="18" fill="#101c2e" stroke="#2b405a"/>
+      <text x="24" y="42" fill="#43d7a5" font-size="13" font-weight="700">INFRAESTRUCTURA</text>
+      <text x="24" y="78" fill="#fff" font-size="22" font-weight="700">Entity Framework</text>
+      <text x="24" y="111" fill="#91a6bc" font-size="15">SQLite / SQL Server</text>
+      <text x="24" y="136" fill="#91a6bc" font-size="15">Auditoría persistente</text>
+      <text x="24" y="161" fill="#91a6bc" font-size="15">Documentos XML</text>
+    </g>
+  </g>
+  <g stroke="#43d7a5" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M275 265 H322"/>
+    <path d="M550 265 H597"/>
+    <path d="M825 265 H872"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#91a6bc">
+    <text x="60" y="420">Flujo principal: solicitud HTTP → reglas de negocio → persistencia → respuesta JSON/XML</text>
+    <text x="60" y="452">Tecnologías: C# · .NET 10 · Entity Framework Core · SQLite · SQL Server · XML</text>
+  </g>
+</svg>
